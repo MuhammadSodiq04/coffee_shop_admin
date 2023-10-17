@@ -1,7 +1,7 @@
 class AppImages {
   static String facebook = "assets/images/facebook.png";
   static String google = "assets/images/google.png";
-  static String birdLogo = "assets/images/bird2.png";
+  static String coffeeLogo = "assets/images/coffee.png";
   static String categoryImgFirst = "assets/images/category_scroll_photo.png";
   static String bakery = "assets/images/bakery.png";
   static String beverages = "assets/images/beverages.png";

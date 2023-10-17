@@ -1,15 +1,16 @@
 import 'package:coffee_shop_admin/data/cubit/tab_cubit.dart';
-import 'package:coffee_shop_admin/data/provider/order_provider.dart';
 import 'package:coffee_shop_admin/data/provider/coffee_provider.dart';
+import 'package:coffee_shop_admin/data/provider/order_provider.dart';
 import 'package:coffee_shop_admin/data/servise/orders_service.dart';
+import 'package:coffee_shop_admin/ui/route/route_names.dart';
 import 'package:coffee_shop_admin/ui/route/routes.dart';
-import 'package:coffee_shop_admin/ui/tab_admin/tab_box_admin.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+
 import 'data/servise/coffee_service.dart';
 
 Future<void> main() async {
@@ -26,8 +27,7 @@ Future<void> main() async {
     child: MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (context) =>
-              CoffeeProvider(coffeeService: CoffeeService()),
+          create: (context) => CoffeeProvider(coffeeService: CoffeeService()),
           lazy: true,
         ),
         ChangeNotifierProvider(
@@ -50,10 +50,11 @@ class MainApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
-          return MaterialApp(
-              onGenerateRoute: AppRoute.generateRoute,
-              debugShowCheckedModeBanner: false,
-              home: TabBoxAdmin());
+          return const MaterialApp(
+            initialRoute: RouteNames.splash,
+            onGenerateRoute: AppRoute.generateRoute,
+            debugShowCheckedModeBanner: false,
+          );
         });
   }
 }
