@@ -99,23 +99,11 @@ class OrderProvider with ChangeNotifier {
   }
 
   Stream<List<BasketModel>> listenOrdersList(String? uid) async* {
-    if (uid == null) {
       yield* FirebaseFirestore.instance.collection(firebaseOrderName).snapshots().map(
             (event1) => event1.docs
                 .map((doc) => BasketModel.fromJson(doc.data()))
                 .toList(),
           );
-    } else {
-      yield* FirebaseFirestore.instance
-          .collection(firebaseOrderName)
-          .where("userId", isNotEqualTo: uid)
-          .snapshots()
-          .map(
-            (event1) => event1.docs
-                .map((doc) => BasketModel.fromJson(doc.data()))
-                .toList(),
-          );
-    }
   }
 
   listenOrders(String userId) async {
