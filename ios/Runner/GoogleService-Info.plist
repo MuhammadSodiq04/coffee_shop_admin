@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDcJNUa1nqES-fprZ-4kkFZ6XvCvNVzaao</string>
+	<key>GCM_SENDER_ID</key>
+	<string>839536042560</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>uz.coffee.shop</string>
+	<key>PROJECT_ID</key>
+	<string>coffee-shop-378fd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>coffee-shop-378fd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:839536042560:ios:eabf19579d3dd26a6a75a5</string>
+</dict>
+</plist>
